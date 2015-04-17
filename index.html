@@ -1,0 +1,245 @@
+<html>
+	<head>
+
+		<!-- Meta
+================================================== -->
+
+<!--Twitter Meta-->
+<meta name="twitter:card" content="photo" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:URL" content="http://events.snapifeye.com/Snapifeye/"/>
+<meta property="og:title" content="Snapifeye Display Widget"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://s3.amazonaws.com/picter-dev/combo_7ebd2fe2eed647518deba4ce1c222b38_some_name.jpeg"/>
+<meta property="og:description"        content="Social Media Management for Event Promotions! Bridge the Gap Between your Events and Social Media." />
+<meta property="article:author"        content="Snapifeye" />
+<meta property="article:publisher"     content="Snapifeye" />
+
+
+<!-- Meta / End -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<!-- Need this -->
+		<script type="text/javascript" src="http://events.snapifeye.com/snapifeye-widget/snapifeye-widget-all.min.js"></script>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<style>
+		html, body {
+				margin: 0px;
+				padding: 0px;
+				background-image: url("http://hdwallpapersmart.com/wp-content/uploads/2014/03/Duke.jpg");
+				background-color:#000;
+				background-size:110%;
+}
+			.sn-widget-gallery--info--event-name{
+				position: absolute;
+  			color: #ffffff;
+			  width: 100%;
+			  top: 0px !important;
+			  height: 0px !important;
+			  margin-top: 0px !important;
+			  font-size: 30px !important;
+			  line-height: 32px !important;
+			  text-align: center;
+}
+
+			.sn-widget-gallery--image{
+				position: relative !important;
+				background:transparent !important;
+  			height:auto;
+				width:100%;
+				max-width: 600px!important;
+			  max-height: 600px!important;
+				padding: 0px 0px 0px 0px;
+
+}
+
+			.sn-widget-gallery--info-container {
+				display: none !important;
+				position: relative !important;
+				top: 0px !important;
+				left:0px !important;
+				font-family: Helvetica;
+			}
+
+			.sn-widget-gallery--image-container{
+				position: relative !important;
+				background:transparent !important;
+  			top: 0px !important;
+  			bottom: 0px !important;
+  			right: 0px !important;
+  			left: 0% !important;
+				padding:0px;
+
+
+			}
+
+				.sn-widget-wrapper{
+				 background:transparent !important;
+				 height:auto !important;
+				 left:0px;
+				 align:center;
+
+			}
+
+			.dummy {
+				margin-top: 100%;
+			}
+
+			.smarty {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			.data-wrapper {
+				position: absolute;
+				width: 100%;
+				height: auto;
+
+			}
+
+
+			.photo-meta-first-name,
+			.photo-meta-last-name {
+				font-style: italic;
+				font-family: Helvetica;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				padding: 100px 25px;
+
+				color: #ffffff;
+				font-weight: 600;
+				font-size: 33px;
+				line-height: 35px;
+
+			}
+			.photo-question {
+				font-style: italic;
+				font-family: Helvetica;
+
+				color: #000;
+				font-weight: 100;
+				font-size: 16px;
+				line-height: 18px;
+			}
+
+			.event-hash-tag {
+				position: absolute;
+				bottom: 200px;
+				right: 50px;
+
+				color: #000;
+				font-size: 36px;
+				line-height: 43px;
+				font-family: Helvetica;
+			}
+
+			.sidebar {
+			   position: absolute;
+				 padding:50px;
+				 background-color:transparent;
+
+	}
+
+
+			a.MyButton {
+				display:block;
+				box-shadow: 6px 6px 8px #2d2d2d;
+				font-size: 32px;
+				color: white;
+				text-align:center;
+				line-height:71px;
+				width:auto;
+				max-width:500px;
+				height:71px;
+				border-radius:3px;
+				align:center;
+				background:#f2653b;
+				font-family: Helvetica;
+			}
+
+
+			.heading{
+				color: #ffffff;
+				font-weight: 600;
+				font-size: 75px;
+				line-height: 78px;
+				text-align:center;
+				padding-top: 25px;
+				background:black;
+			}
+}
+
+				@media (max-width: 569px){
+					.sn-widget-wrapper{
+					 left:0px !important;
+						}
+
+				}
+
+				@media (max-width: 479px){
+					.sidebar{
+						top:0px !important;
+}
+					.myslider{
+						align:center;
+						width: 269px;
+						height: 269px;
+						padding: 0px;
+
+						}
+
+				}
+
+
+</style>
+
+		<script type="text/javascript">
+
+			function resolveFirstName(data) {
+				console.log("data", data);
+
+				var photo = data.photo
+				var fullName = (photo.meta || {}).name;
+				if (fullName) {
+					fullName = fullName.split(" ")[1];
+				}
+				return fullName;
+			}
+
+			function resolveEventName(data) {
+				return data.event.name;
+			}
+
+			function resolveQuestion(data) {
+				console.log("data", data);
+
+
+				return data.photo.caption;
+			}
+
+		</script>
+
+	</head>
+
+	  </div>
+
+<div class="col-md-6"><div class="sidebar">
+
+	<snapifeye-widget class="full-screen" params="eventId: 85, period: 10000, custom: true">
+
+	</div></div class="col-md-6">
+
+	<div class="col-md-6">
+
+
+
+	</div class="col-md-6">
+</div>
+
+	</body>
+</html>
